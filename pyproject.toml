@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "versioned_collection"
+version = "0.0.1"
+description = "A Python library for storing and loading versioned collections of items searchable by key or value"
+authors = ["Roman Baron <1299323+RomansWorks@users.noreply.github.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyyaml = {version ="^6.0.1", optional=true}
+aiohttp = {version ="^3.9.1", optional=true}
+
+[tool.poetry.extras]
+yaml = ["pyyaml"]
+http = ["aiohttp"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
